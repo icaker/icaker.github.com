@@ -2,7 +2,6 @@
 layout: page
 title: Lee Menghan
 ---
-{% include JB/setup %}
 
 ## My Blog site 
   [It is not a piece of cake.](http://icaker.info)
