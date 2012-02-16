@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Lee Menghan
 ---
 
@@ -13,7 +12,9 @@ title: Lee Menghan
   
 ## About my id
   why i choose 'icaker' to be my username is that i want to be a-piece-of-cake-eater,
+
   however,it seems that life is not a piece of cake to me,
+
   so,i am considering using notcake instead of the privious one. 
 
 

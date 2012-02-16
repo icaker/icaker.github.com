@@ -1,0 +1,78 @@
+body {
+	font-family: 'lucida grande', helvetica, arial, sans-serif;
+	font-size: 76%;
+}
+
+/* basic styling first */
+.lifted_content_box {
+	display: block;
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.lifted_content_box h1 {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 2em;
+	margin: 0;
+	
+	/* for the triangular shape/cut */
+	height: 0;
+	border-bottom: 25px solid #505050; /* kinda acts as the height */
+	border-right: 15px solid transparent; /* adjust to change the angle */
+	
+	display: inline-block;
+	color: #fff;
+	text-shadow: 1px 1px 0 #585858;
+	padding: 0 10px;
+	vertical-align: bottom; /* fixes the mysterious gaps bug */
+}
+.lifted_content_box div {
+	padding: 10px;
+	background: #fff;
+	
+	border-top: 5px solid #505050; /* was just experimenting. gives a nice look and feel :D */
+	
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.20);
+}
+.lifted_content_box p {
+	margin: 0 0 10px;
+	color: #555;
+	line-height: 1.5em;
+}
+
+/* lifted shadows */
+.lifted_content_box::before, .lifted_content_box::after {
+	content: '';
+	position: absolute;
+	
+	width: 50%; /* maybe we could set a max-width for larger content boxes ? */
+	height: 20px;
+	
+	-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	-ms-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	
+	-webkit-transform: rotate(-5deg) skew(-10deg);
+	-moz-transform: rotate(-5deg) skew(-10deg);
+	-o-transform: rotate(-5deg) skew(-10deg);
+	-ms-transform: rotate(-5deg) skew(-10deg);
+	transform: rotate(-5deg) skew(-10deg);
+	
+	left: 10px;
+	bottom: 13px;
+	z-index: -1;
+}
+.lifted_content_box::after {
+	left: auto;
+	right: 10px;
+	
+	-webkit-transform: rotate(5deg) skew(10deg);
+	-moz-transform: rotate(5deg) skew(10deg);
+	-o-transform: rotate(5deg) skew(10deg);
+	-ms-transform: rotate(5deg) skew(10deg);
+	transform: rotate(5deg) skew(10deg);
+}
